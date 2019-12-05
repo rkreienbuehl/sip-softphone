@@ -12,7 +12,7 @@ buildscript {
 
   dependencies {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    classpath 'gradle.plugin.com.github.maiflai:gradle-scalatest:0.14'
+    classpath 'gradle.plugin.com.github.maiflai:gradle-scalatest:0.19'
     classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
   }
 }
@@ -73,7 +73,7 @@ task codeCoverageReport(type: JacocoReport) {
 
   reports {
     xml.enabled true
-    xml.destination "${buildDir}/reports/jacoco/report.xml"
+    xml.destination file("${buildDir}/reports/jacoco/report.xml")
     html.enabled false
     csv.enabled false
   }
